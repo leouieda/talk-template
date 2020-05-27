@@ -79,7 +79,13 @@ Another citation or funny note.
 
 <!-- .slide: class="slide-title" data-background-image="img/title-slide-background.jpg" data-background-repeat="no-repeat" data-background-opacity="0.25" data-background-color="#000000" data-background-position="center" -->
 
-<div class="r-stretch bottom-left">
+<div class="r-stretch quote">
+
+"Something or other"
+
+</div>
+
+<div class="bottom-left">
 
 Another citation or funny note.
 
@@ -90,7 +96,7 @@ Another citation or funny note.
 <!-- CONTACT -->
 <!-- ====================================================================== -->
 
-<!-- .slide: class="slide-contact" data-background-image="img/title-slide-background.jpg" data-background-repeat="no-repeat" data-background-opacity="0.20" data-background-color="#000000" data-background-position="center" -->
+<!-- .slide: class="slide-contact" data-background-color="rgb(25, 34, 55)" -->
 
 <div class="centered">
 <div>
