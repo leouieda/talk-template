@@ -61,9 +61,9 @@
       plugins: [ RevealMarkdown, RevealMath, RevealHighlight],
       width: 1920,
       height: 1080,
-      margin: 0.02,
+      margin: 0.1,
       // Vertical centering of slides
-      center: true,
+      center: false,
       // Transition style
       transition: 'none', // none/fade/slide/convex/concave/zoom
       // Transition speed
@@ -137,7 +137,7 @@
       mouseWheel: false,
       // The maximum number of pages a single slide can expand onto when printing
       // to PDF, unlimited by default (Number.POSITIVE_INFINITY)
-      pdfMaxPagesPerSlide: 1,
+      pdfMaxPagesPerSlide: Number.POSITIVE_INFINITY,
       // Prints each fragment on a separate slide
       pdfSeparateFragments: true,
       // Offset used to reduce the height of content within exported PDF pages.
@@ -145,7 +145,7 @@
       // print to PDF. CLI printing options, like phantomjs and wkpdf, can end
       // on precisely the total height of the document whereas in-browser
       // printing has to end one pixel before.
-      pdfPageHeightOffset: 0,
+      pdfPageHeightOffset: -1,
     });
   </script>
 

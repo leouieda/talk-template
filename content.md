@@ -1,32 +1,43 @@
 <!-- .slide: class="slide-title" data-background-image="img/title-slide-background.jpg" data-background-repeat="no-repeat" data-background-opacity="0.25" data-background-color="#000000" data-background-position="center" -->
 
+<div class="centered">
+<div>
+
 # A slightly long<br>talk title
 
 ## [Leonardo Uieda](https://www.leouieda.com)
 
 [<i class="fab fa-twitter fa-fw"></i> @leouieda](https://twitter.com/leouieda)
 
-*Location | 25 March 2020*
+*Location | Date*
 
 <div class="container">
-<div class="col">
+<div class="col-left">
 
 [<img src="img/compgeolab.svg" style="width: 40%">](https://www.compgeolab.org)
 
 </div>
-<div class="col">
+<div class="col-right">
 
 [<img src="img/university-of-liverpool-white.png" style="width: 40%">](https://www.liverpool.ac.uk/earth-ocean-and-ecological-sciences/)
 
 </div>
 </div>
 
+</div>
+</div>
 
 ---
 
 <!-- .slide: class="slide-transition" data-background-color="rgb(25, 34, 55)" -->
 
+<div class="centered">
+<div>
+
 # Background
+
+</div>
+</div>
 
 ---
 
@@ -48,9 +59,29 @@ A image with:
 </div>
 </div>
 
-<div class="bottom-right">
+<div class="r-stretch bottom-right">
 
 Image from [this place](http://www.leouieda.com)
+
+</div>
+
+---
+
+# Something else
+
+<div class="r-stretch bottom-right">
+
+Another citation or funny note.
+
+</div>
+
+---
+
+<!-- .slide: class="slide-title" data-background-image="img/title-slide-background.jpg" data-background-repeat="no-repeat" data-background-opacity="0.25" data-background-color="#000000" data-background-position="center" -->
+
+<div class="r-stretch bottom-left">
+
+Another citation or funny note.
 
 </div>
 
@@ -60,6 +91,9 @@ Image from [this place](http://www.leouieda.com)
 <!-- ====================================================================== -->
 
 <!-- .slide: class="slide-contact" data-background-image="img/title-slide-background.jpg" data-background-repeat="no-repeat" data-background-opacity="0.20" data-background-color="#000000" data-background-position="center" -->
+
+<div class="centered">
+<div>
 
 # Contact
 
@@ -81,12 +115,18 @@ Image from [this place](http://www.leouieda.com)
 </li>
 </ul>
 
+</div>
+</div>
+
 ---
 
 <!-- LICENSE -->
 <!-- ====================================================================== -->
 
 <!-- .slide: class="slide-license" -->
+
+<div class="centered">
+<div>
 
 <p class="license-icons">
 <i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i>
@@ -95,3 +135,6 @@ Image from [this place](http://www.leouieda.com)
 This presentation is licensed under a
 
 [Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
+
+</div>
+</div>

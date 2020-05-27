@@ -3,12 +3,86 @@
 
 .reveal {
     font-size: @basefontsize;
-    .nomargin {
-        margin: 0;
-        max-width: none;
-        max-height: none;
+
+    // Classes for placing notes in the botoom of a slide. Must be used with
+    // the r-stretch class in a div.
+    .bottom {
+        display: flex;
+        p {
+            background-color: #eeeeeebb;
+            font-size: @basefontsize * 0.45 !important;
+            padding: 10px 20px;
+            margin: 0 !important;
+            color: #333333;
+            align-self: flex-end;
+        }
     }
+    div.bottom-left {
+        .bottom();
+        justify-content: flex-start;
+    }
+    div.bottom-right {
+        .bottom();
+        justify-content: flex-end;
+    }
+
+    // Centered quote block. Use in a div.
+    .quote {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #eeeeeedd;
+        border: 3px solid #666666;
+        p {
+            padding: 5%;
+        }
+    }
+
+    // Centre the content for a slide. Put in a div that wraps the entire
+    // slide. Must have another empty div inside it as well.
+    .centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    // Displaying two columns. Wrap them in the container. Use either
+    // col-left/right for 2 equal columns or col-large col-small for one larger
+    // column.
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+        }
+    }
+    .col-left {
+        flex: 1;
+        padding: 0 2% 0 0 !important;
+    }
+    .col-right {
+        flex: 1;
+        padding: 0 0 0 2% !important;
+    }
+    .col-large {
+        flex: 3;
+        padding: 0 2% 0 0 !important;
+        text-align: left;
+    }
+    .col-small {
+        flex: 2;
+        padding: 0 0 0 2% !important;
+        text-align: left;
+    }
+
+    // Tweaks to Reveal.js CSS
     section {
+        .nomargin {
+            margin: 0;
+            max-width: none;
+            max-height: none;
+        }
         img {
             width: 100%;
             border: none;
@@ -23,7 +97,18 @@
         &.has-light-background h1 {
             color: #333333;
         }
+        // Needed to be able to centre slides and place notes at the bottom.
+        &.present {
+            height: 100%;
+        }
     }
+
+    .print-pdf {
+        section.present {
+            height: 100%;
+        }
+    }
+
     h1, h2, h3  {
         text-shadow: 2px 3px 3px #00000055 !important;
     }
@@ -46,7 +131,7 @@
         margin-bottom: 5%;
     }
 
-    // CUSTOM CLASSES
+    // Custom slide classes
     .slide-transition {
         h1 {
             font-size: @basefontsize * 3;
@@ -71,7 +156,7 @@
         }
         p {
             margin-bottom: 2%;
-            font-size: @basefontsize * 0.8;
+            font-size: @basefontsize * 0.6;
         }
     }
     .slide-license {
@@ -96,68 +181,4 @@
             margin-left: 3%;
         }
     }
-}
-
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    img {
-        width: 100%;
-    }
-}
-
-.col-padding {
-    padding: 0 2% !important;
-}
-
-.col {
-    flex: 1;
-    .col-padding();
-}
-
-.col-large {
-    flex: 3;
-    .col-padding();
-    text-align: left;
-}
-
-.col-small {
-    flex: 2;
-    .col-padding();
-    text-align: left;
-}
-
-.quote {
-    background-color: #eeeeeedd;
-    border: 3px solid #666666;
-    p {
-        padding: 5%;
-    }
-}
-
-.bottom {
-    position: fixed;
-    bottom: 3%;
-    background-color: #ffffffbb;
-    p {
-        font-size: @basefontsize * 0.45 !important;
-        padding: 20px;
-        margin: 0 !important;
-    }
-}
-
-.bottom-left {
-    left: 2%;
-    .bottom();
-}
-
-.bottom-right {
-    right: 2%;
-    .bottom();
-}
-
-.attribution {
-    font-size: @basefontsize * 0.45 !important;
-    padding: 20px;
-    margin: 0;
 }
