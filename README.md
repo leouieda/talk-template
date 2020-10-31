@@ -14,6 +14,8 @@ https://github.com/matthewturk/mjt-talk-template
 
 ## Serving the slides
 
+## Locally
+
 Install [livereload](https://github.com/lepture/python-livereload):
 
 ```
@@ -29,6 +31,17 @@ conda install livereload -c conda-forge
 Use `make serve` to start a server at http://localhost:8000. The page will
 automatically reload the page when you update any of the files in the
 repository.
+
+## GitHub Pages
+
+Go to your repository `Setting > GitHub` Pages and select `Source` as your 
+`master` or `main` branch and folder `/ (root)`. You probably want to select 
+`Enforce HTTPS` as well.
+
+Your talk should now be served at https://USERNAME.github.io/REPOSITORY
+(it may take a little while for this to happen). 
+For example, this template is served at
+https://www.leouieda.com/talk-template/ (I use a custom domain).
 
 ## License
 
