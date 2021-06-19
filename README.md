@@ -34,8 +34,8 @@ repository.
 
 ## GitHub Pages
 
-Go to your repository `Setting > GitHub` Pages and select `Source` as your 
-`master` or `main` branch and folder `/ (root)`. You probably want to select 
+Go to your repository `Setting > Pages` and select `Source` as your 
+`main` branch and folder `/ (root)`. You probably want to select 
 `Enforce HTTPS` as well.
 
 Your talk should now be served at https://USERNAME.github.io/REPOSITORY
