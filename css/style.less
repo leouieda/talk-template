@@ -80,7 +80,7 @@
             margin: 0;
             font-size: @basefontsize * 1;
             line-height: @basefontsize * 1.5;
-            background-color: #333333;
+            background-color: #222222;
             color: #eeeeee;
             a {
                 color: #eeeeee;
@@ -167,15 +167,17 @@
         }
         p {
             font-size: @basefontsize * 0.45;
+            line-height: @basefontsize * 0.45;
             text-shadow: 1px 1px 2px #000000;
-            margin: 0 0 20px 0;
+            margin: 0 0 25px 0;
         }
         h1#talk-title {
             margin: 0 auto;
             text-shadow: 3px 3px 5px #000000;
-            font-size: @basefontsize * 1.8;
+            font-size: @basefontsize * 1.7;
             line-height: @basefontsize * 2.5;
             text-transform: none;
+            font-weight: normal;
         }
         p#talk-authors {
             font-size: @basefontsize * 0.7;
@@ -192,7 +194,7 @@
             margin: 0;
         }
         .talk-info {
-            margin-top: 40px;
+            margin-top: 60px;
             .talk-logos-container {
                 position: relative;
                 width: 100%;
@@ -204,12 +206,18 @@
                     left: 0;
                     text-align: right;
                     img {
-                        height: 1.5em;
+                        height: 1.0em;
                         width: auto;
                         margin: 0 2%;
                     }
                 }
             }
+        }
+    }
+    .slide-contact {
+        a {
+            color: @lightcolor;
+            text-decoration: none !important;
         }
     }
     .slide-license {
@@ -258,15 +266,17 @@
         }
     }
     h1 {
-        margin-bottom: 2%;
-        font-size: @basefontsize * 1.5;
-        line-height: @basefontsize * 2.5;
+        font-size: @basefontsize * 1.6;
+        line-height: @basefontsize * 2.0;
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 3rem;
     }
     h2 {
         font-size: @basefontsize * 1.3;
-        font-weight: bold;
+        font-weight: normal;
         text-transform: none;
-        margin-bottom: 5%;
+        margin-bottom: 2rem;
     }
     h3 {
         font-size: @basefontsize * 1;
@@ -274,33 +284,21 @@
         text-transform: none;
         margin-bottom: 5%;
     }
-    h4 {
-        font-size: @basefontsize * 1;
-        font-weight: normal;
-        text-transform: none;
-        margin-bottom: 5%;
-    }
     p {
-        font-size: @basefontsize;
-        line-height: @basefontsize * 1.4;
-        margin-bottom: 30px;
+        font-size: @basefontsize * 0.9;
+        line-height: @basefontsize * 1.2;
+        margin: 0 0 30px 0;
     }
     ol {
         font-size: @basefontsize * 0.9;
+        margin: 30px 0;
     }
     ul {
-        font-size: @basefontsize * 1;
+        font-size: @basefontsize * 0.9;
+        margin: 30px 0;
         &.fa-ul {
             list-style-type: none;
-            margin: 0 0 0 1.5em;
-        }
-        &.project-icons {
-            margin: 0 0 0 1.6em;
-            font-size: @basefontsize * 0.55;
-            line-height: @basefontsize * 0.7;
-        }
-        &.project-icons > li {
-            margin-bottom: 30px;
+            margin-left: 1.5em;
         }
     }
     li {
