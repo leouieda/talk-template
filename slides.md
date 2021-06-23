@@ -174,6 +174,10 @@ This way the image is larger on the screen. Use it for maps or main figures.
 
 Explain what is shown on the image.
 
+Maybe include some maths:
+
+$ D\dfrac{\partial^4 w}{\partial x^4} = q - g (\rho_m - \rho_w) w $
+
 </div>
 </div>
 
