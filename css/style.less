@@ -1,11 +1,6 @@
 @basefontsize: 66px;
 @lightcolor: #ffffff;
 
-@font-face {
-    font-family: EBGaramond;
-    src: url(EBGaramond/EBGaramond-VariableFont_wght.ttf) format("truetype");
-}
-
 .reveal {
     font-size: @basefontsize;
 
@@ -15,8 +10,8 @@
         display: flex;
         p {
             background-color: #eeeeee;
-            font-size: @basefontsize * 0.45 !important;
-            line-height: @basefontsize * 0.7 !important;
+            font-size: @basefontsize * 0.4 !important;
+            line-height: @basefontsize * 0.6 !important;
             padding: 15px 25px;
             margin: 0 !important;
             color: #333333;
@@ -72,10 +67,11 @@
         }
     }
 
-    // Centered quote block. Use in a div.
+    // Centered quote block. Use inside another div.
     .quote {
         display: flex;
         align-items: center;
+        width: 100%;
         & > p {
             width: 100%;
             box-shadow: 5px 5px 10px #00000044;
@@ -151,8 +147,82 @@
     }
     .col {
         flex: 1;
-        padding: 0 2% !important;
+        padding: 0;
         text-align: left;
+    }
+
+    // Custom slide classes
+    .slide-transition {
+        h1 {
+            font-size: @basefontsize * 2;
+            line-height: @basefontsize * 2.9;
+            margin: 5% 0;
+            text-shadow: 3px 3px 5px #000000;
+        }
+    }
+    .slide-title {
+        a {
+            color: @lightcolor;
+            text-decoration: none !important;
+        }
+        p {
+            font-size: @basefontsize * 0.45;
+            text-shadow: 1px 1px 2px #000000;
+            margin: 0 0 20px 0;
+        }
+        h1#talk-title {
+            margin: 0 auto;
+            text-shadow: 3px 3px 5px #000000;
+            font-size: @basefontsize * 1.8;
+            line-height: @basefontsize * 2.5;
+            text-transform: none;
+        }
+        p#talk-authors {
+            font-size: @basefontsize * 0.7;
+            line-height: @basefontsize * 0.7;
+            text-shadow: 2px 2px 2px #000000;
+            margin: 50px 0;
+        }
+        #talk-speaker {
+            font-weight: bold;
+            text-decoration: underline;
+        }
+        #talk-social {
+            font-size: @basefontsize * 0.6;
+            margin: 0;
+        }
+        .talk-info {
+            margin-top: 40px;
+            .talk-logos-container {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                .talk-logos {
+                    position: absolute;
+                    width: 100%;
+                    bottom: 10%;
+                    left: 0;
+                    text-align: right;
+                    img {
+                        height: 1.5em;
+                        width: auto;
+                        margin: 0 2%;
+                    }
+                }
+            }
+        }
+    }
+    .slide-license {
+        .license-icons {
+            font-size: @basefontsize * 1.5;
+            i {
+                margin-right: 5px;
+            }
+        }
+        p {
+            font-size: @basefontsize * 0.75;
+            line-height: @basefontsize * 1.1;
+        }
     }
 
     // Tweaks to Reveal.js CSS
@@ -191,8 +261,6 @@
         margin-bottom: 2%;
         font-size: @basefontsize * 1.5;
         line-height: @basefontsize * 2.5;
-        font-weight: normal;
-        text-transform: none;
     }
     h2 {
         font-size: @basefontsize * 1.3;
@@ -251,84 +319,6 @@
     .print-pdf {
         section.present {
             height: 100%;
-        }
-    }
-
-    // Custom slide classes
-    .slide-transition {
-        h1 {
-            font-size: @basefontsize * 2;
-            line-height: @basefontsize * 2.9;
-            margin: 5% 0;
-            text-shadow: 3px 3px 5px #000000;
-        }
-    }
-    .slide-title {
-        a {
-            color: @lightcolor;
-            text-decoration: none !important;
-        }
-        .talk-title {
-            margin: 3% auto 2% auto;
-        }
-        .talk-authors {
-            margin: 3% auto 5% auto;
-        }
-        h1 {
-            margin: 0;
-            text-shadow: 3px 3px 5px #000000;
-            font-size: @basefontsize * 2.5;
-            line-height: @basefontsize * 2.5;
-            text-transform: none;
-            font-family: EBGaramond;
-        }
-        h2 {
-            margin: 0;
-            text-shadow: 2px 2px 3px #000000;
-            font-size: @basefontsize * 1.7;
-            line-height: @basefontsize * 3;
-            font-weight: normal;
-            font-family: EBGaramond;
-        }
-        h3 {
-            font-size: @basefontsize * 1;
-            line-height: @basefontsize * 1.5;
-            text-shadow: 2px 2px 3px #000000;
-            margin-bottom: 1%;
-            font-weight: normal;
-        }
-        p {
-            font-size: @basefontsize * 0.5;
-            line-height: @basefontsize * 0.7;
-            margin: 2% auto;
-        }
-        .title-license p {
-            font-size: @basefontsize * 0.5;
-        }
-        .title-logo {
-            height: 1.2em;
-            width: auto;
-            margin: 0 3%;
-        }
-    }
-    .slide-conclusions {
-        h2 {
-            margin-bottom: 2%;
-        }
-        ol > li {
-            margin-bottom: 3%;
-        }
-    }
-    .slide-license {
-        .license-icons {
-            font-size: @basefontsize * 1.5;
-            i {
-                margin-right: 5px;
-            }
-        }
-        p {
-            font-size: @basefontsize * 0.75;
-            line-height: @basefontsize * 1.1;
         }
     }
 }
