@@ -3,5 +3,5 @@ channels:
   - conda-forge
   - defaults
 dependencies:
-  - python==3.8
-  - livereload==2.6.1
+  - python==3.9
+  - livereload==2.6.*

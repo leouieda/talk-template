@@ -1,0 +1,334 @@
+@basefontsize: 66px;
+@lightcolor: #ffffff;
+
+@font-face {
+    font-family: EBGaramond;
+    src: url(EBGaramond/EBGaramond-VariableFont_wght.ttf) format("truetype");
+}
+
+.reveal {
+    font-size: @basefontsize;
+
+    // Classes for placing notes in the bottom of a slide. Must be used with
+    // the r-stretch class in a div.
+    .bottom {
+        display: flex;
+        p {
+            background-color: #eeeeee;
+            font-size: @basefontsize * 0.45 !important;
+            line-height: @basefontsize * 0.7 !important;
+            padding: 15px 25px;
+            margin: 0 !important;
+            color: #333333;
+            align-self: flex-end;
+            box-shadow: 3px 3px 2px #00000044;
+            text-align: left;
+            a {
+                color: #333333;
+                text-decoration: underline;
+            }
+        }
+    }
+    div.bottom-center {
+        .bottom();
+        justify-content: center;
+    }
+    div.bottom-left {
+        .bottom();
+        justify-content: flex-start;
+    }
+    div.bottom-right {
+        .bottom();
+        justify-content: flex-end;
+    }
+    .bottom-dark {
+        p {
+            background-color: #333333 !important;
+            color: #eeeeee !important;
+            a {
+                color: #eeeeee !important;
+                text-decoration: underline !important;
+            }
+        }
+    }
+
+    // Make p, ul, ol inside this have large or small font-size
+    .huge {
+        p, ul, ol {
+            font-size: @basefontsize * 1.3;
+            line-height: @basefontsize * 2.5;
+        }
+    }
+    .small {
+        p, ul, ol {
+            font-size: @basefontsize * 0.75;
+            line-height: @basefontsize * 1.1;
+        }
+    }
+    .tiny {
+        p, ul, ol {
+            font-size: @basefontsize * 0.45;
+            line-height: @basefontsize * 0.7;
+        }
+    }
+
+    // Centered quote block. Use in a div.
+    .quote {
+        display: flex;
+        align-items: center;
+        & > p {
+            width: 100%;
+            box-shadow: 5px 5px 10px #00000044;
+            border-radius: 15px;
+            padding: 5%;
+            margin: 0;
+            font-size: @basefontsize * 1;
+            line-height: @basefontsize * 1.5;
+            background-color: #333333;
+            color: #eeeeee;
+            a {
+                color: #eeeeee;
+                text-decoration: underline;
+            }
+        }
+    }
+
+    // Centre the content for a slide. Put in a div that wraps the entire
+    // slide. Must have another empty div inside it as well.
+    .centered {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+    }
+
+    // Left align text in this container
+    .lefted {
+        align-items: left;
+        justify-content: left;
+        text-align: left;
+    }
+
+    // Displaying two columns. Wrap them in the container. Use either
+    // col-left/right for 2 equal columns or col-large col-small for one larger
+    // column.
+    .container {
+        display: flex;
+        flex-wrap: wrap;
+        img {
+            width: 100%;
+        }
+    }
+    .col-left {
+        flex: 1;
+        padding: 0 2% 0 0;
+        text-align: left;
+    }
+    .col-right {
+        flex: 1;
+        padding: 0 0 0 2%;
+        text-align: left;
+    }
+    .col-large {
+        flex: 3;
+        padding: 0 2% 0 0;
+        text-align: left;
+    }
+    .col-small {
+        flex: 2;
+        padding: 0 0 0 2%;
+        text-align: left;
+    }
+    .col-title-img {
+        flex: 1;
+        padding: 0 2% 0 0 !important;
+        text-align: right;
+    }
+    .col-title {
+        flex: 2.5;
+        padding: 0 0 0 2% !important;
+        text-align: left;
+    }
+    .col {
+        flex: 1;
+        padding: 0 2% !important;
+        text-align: left;
+    }
+
+    // Tweaks to Reveal.js CSS
+    section {
+        .nomargin {
+            margin: 0 auto;
+            max-width: none;
+            max-height: none;
+        }
+        img {
+            width: 100%;
+            border: none;
+            box-shadow: none;
+            background: none;
+            .nomargin();
+        }
+        video {
+            width: 100%;
+            .nomargin();
+        }
+        &.has-light-background h1 {
+            color: #333333;
+        }
+        &.has-dark-background {
+            a {
+                color: @lightcolor;
+                text-decoration: underline;
+            }
+        }
+        // Needed to be able to centre slides and place notes at the bottom.
+        &.present {
+            height: 100%;
+        }
+    }
+    h1 {
+        margin-bottom: 2%;
+        font-size: @basefontsize * 1.5;
+        line-height: @basefontsize * 2.5;
+        font-weight: normal;
+        text-transform: none;
+    }
+    h2 {
+        font-size: @basefontsize * 1.3;
+        font-weight: bold;
+        text-transform: none;
+        margin-bottom: 5%;
+    }
+    h3 {
+        font-size: @basefontsize * 1;
+        font-weight: bold;
+        text-transform: none;
+        margin-bottom: 5%;
+    }
+    h4 {
+        font-size: @basefontsize * 1;
+        font-weight: normal;
+        text-transform: none;
+        margin-bottom: 5%;
+    }
+    p {
+        font-size: @basefontsize;
+        line-height: @basefontsize * 1.4;
+        margin-bottom: 30px;
+    }
+    ol {
+        font-size: @basefontsize * 0.9;
+    }
+    ul {
+        font-size: @basefontsize * 1;
+        &.fa-ul {
+            list-style-type: none;
+            margin: 0 0 0 1.5em;
+        }
+        &.project-icons {
+            margin: 0 0 0 1.6em;
+            font-size: @basefontsize * 0.55;
+            line-height: @basefontsize * 0.7;
+        }
+        &.project-icons > li {
+            margin-bottom: 30px;
+        }
+    }
+    li {
+        margin-bottom: 60px;
+    }
+    pre {
+        width: 100%;
+        margin: 0;
+        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
+        code {
+            padding: 3%;
+            max-height: none;
+            font-size: @basefontsize * 0.5;
+        }
+    }
+    .print-pdf {
+        section.present {
+            height: 100%;
+        }
+    }
+
+    // Custom slide classes
+    .slide-transition {
+        h1 {
+            font-size: @basefontsize * 2;
+            line-height: @basefontsize * 2.9;
+            margin: 5% 0;
+            text-shadow: 3px 3px 5px #000000;
+        }
+    }
+    .slide-title {
+        a {
+            color: @lightcolor;
+            text-decoration: none !important;
+        }
+        .talk-title {
+            margin: 3% auto 2% auto;
+        }
+        .talk-authors {
+            margin: 3% auto 5% auto;
+        }
+        h1 {
+            margin: 0;
+            text-shadow: 3px 3px 5px #000000;
+            font-size: @basefontsize * 2.5;
+            line-height: @basefontsize * 2.5;
+            text-transform: none;
+            font-family: EBGaramond;
+        }
+        h2 {
+            margin: 0;
+            text-shadow: 2px 2px 3px #000000;
+            font-size: @basefontsize * 1.7;
+            line-height: @basefontsize * 3;
+            font-weight: normal;
+            font-family: EBGaramond;
+        }
+        h3 {
+            font-size: @basefontsize * 1;
+            line-height: @basefontsize * 1.5;
+            text-shadow: 2px 2px 3px #000000;
+            margin-bottom: 1%;
+            font-weight: normal;
+        }
+        p {
+            font-size: @basefontsize * 0.5;
+            line-height: @basefontsize * 0.7;
+            margin: 2% auto;
+        }
+        .title-license p {
+            font-size: @basefontsize * 0.5;
+        }
+        .title-logo {
+            height: 1.2em;
+            width: auto;
+            margin: 0 3%;
+        }
+    }
+    .slide-conclusions {
+        h2 {
+            margin-bottom: 2%;
+        }
+        ol > li {
+            margin-bottom: 3%;
+        }
+    }
+    .slide-license {
+        .license-icons {
+            font-size: @basefontsize * 1.5;
+            i {
+                margin-right: 5px;
+            }
+        }
+        p {
+            font-size: @basefontsize * 0.75;
+            line-height: @basefontsize * 1.1;
+        }
+    }
+}
