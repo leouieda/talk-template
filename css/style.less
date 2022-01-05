@@ -1,322 +1,330 @@
-@basefontsize: 66px;
+// Styling for the slides.
+//
+// Apply tweaks to some reveal.js styles and create some custom classes to make
+// it easier to create lectures. Uses LESS (https://lesscss.org).
+
+
+// VARIABLES
+// ============================================================================
+@basefontsize: 54px;
 @lightcolor: #ffffff;
+@darkcolor: #333333;
+@gutter: 25px;
+@font_main: "Computer Modern Serif";
+@font_footnote: "Source Sans Pro";
+@font_title: "Computer Modern Serif";
+@font_code: "Computer Modern Typewriter";
 
+// Make the KaTeX font size the same as the text size (default is slightly
+// larger)
+.katex {
+  font-size: 1em !important;
+}
+
+// Everything needs to be defined inside the reveal class to avoid being
+// overwritten by reveal styling.
 .reveal {
-    font-size: @basefontsize;
 
-    // Classes for placing notes in the bottom of a slide. Must be used with
-    // the r-stretch class in a div.
-    .bottom {
-        display: flex;
-        p {
-            background-color: #eeeeee;
-            font-size: @basefontsize * 0.4 !important;
-            line-height: @basefontsize * 0.6 !important;
-            padding: 15px 25px;
-            margin: 0 !important;
-            color: #333333;
-            align-self: flex-end;
-            box-shadow: 3px 3px 2px #00000044;
-            text-align: left;
-            a {
-                color: #333333;
-                text-decoration: underline;
-            }
-        }
-    }
-    div.bottom-center {
-        .bottom();
-        justify-content: center;
-    }
-    div.bottom-left {
-        .bottom();
-        justify-content: flex-start;
-    }
-    div.bottom-right {
-        .bottom();
-        justify-content: flex-end;
-    }
-    .bottom-dark {
-        p {
-            background-color: #333333 !important;
-            color: #eeeeee !important;
-            a {
-                color: #eeeeee !important;
-                text-decoration: underline !important;
-            }
-        }
-    }
+  // CUSTOM CLASSES
+  // ========================================================================
 
-    // Make p, ul, ol inside this have large or small font-size
-    .huge {
-        p, ul, ol {
-            font-size: @basefontsize * 1.3;
-            line-height: @basefontsize * 2.5;
-        }
+  // Make elements inside this div have larger or smaller font-size
+  .huge {
+    p, a, ul, ol {
+      font-size: @basefontsize * 2 !important;
+      line-height: @basefontsize * 2.5 !important;
     }
-    .small {
-        p, ul, ol {
-            font-size: @basefontsize * 0.75;
-            line-height: @basefontsize * 1.1;
-        }
+  }
+  .small {
+    p, a, ul, ol {
+      font-size: @basefontsize * 0.7 !important;
+      line-height: @basefontsize * 1 !important;
     }
-    .tiny {
-        p, ul, ol {
-            font-size: @basefontsize * 0.45;
-            line-height: @basefontsize * 0.7;
-        }
+  }
+  .tiny {
+    p, a, ul, ol {
+      font-size: @basefontsize * 0.5 !important;
+      line-height: @basefontsize * 0.6 !important;
     }
+  }
+  .miniscule {
+    p, a, ul, ol {
+      font-size: @basefontsize * 0.37 !important;
+      line-height: @basefontsize * 0.5 !important;
+    }
+  }
 
-    // Centered quote block. Use inside another div.
-    .quote {
-        display: flex;
-        align-items: center;
-        width: 100%;
-        & > p {
-            width: 100%;
-            box-shadow: 5px 5px 10px #00000044;
-            border-radius: 15px;
-            padding: 5%;
-            margin: 0;
-            font-size: @basefontsize * 1;
-            line-height: @basefontsize * 1.5;
-            background-color: #222222;
-            color: #eeeeee;
-            a {
-                color: #eeeeee;
-                text-decoration: underline;
-            }
-        }
+  // Dark background and light text for p inside this.
+  .dark {
+    p {
+      background-color: @darkcolor !important;
+      color: #dddddd !important;
+      a {
+        color: #dddddd !important;
+        text-decoration: underline !important;
+      }
     }
+  }
 
-    // Centre the content for a slide. Put in a div that wraps the entire
-    // slide. Must have another empty div inside it as well.
-    .centered {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        height: 100%;
+  // Footnotes. Use in a div. Add the r-stretch class on the element before to
+  // push to the bottom of the slide.
+  .footnote {
+    .miniscule();
+    display: flex;
+    justify-content: flex-end;
+    p {
+      background-color: #eeeeee;
+      color: @darkcolor;
+      font-family: @font_footnote;
+      padding: 15px 25px;
+      margin: 0 !important;
+      box-shadow: 4px 3px 3px #00000033;
+      text-align: left;
+      a {
+        color: @darkcolor;
+        font-family: @font_footnote;
+        text-decoration: underline;
+      }
     }
+  }
+  .footnote-center {
+    .footnote();
+    justify-content: center;
+  }
+  .footnote-left {
+    .footnote();
+    justify-content: flex-start;
+  }
 
-    // Left align text in this container
-    .lefted {
-        align-items: left;
-        justify-content: left;
-        text-align: left;
+  // Centered quote block. Use inside another div.
+  .quote {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    & > p {
+      background-color: #eeeeee;
+      color: @darkcolor;
+      width: 100%;
+      box-shadow: 5px 5px 10px #00000033;
+      border-radius: 10px;
+      padding: 5%;
+      margin: 0;
+      a {
+        color: @darkcolor;
+        text-decoration: underline;
+      }
     }
+  }
 
-    // Displaying two columns. Wrap them in the container. Use either
-    // col-left/right for 2 equal columns or col-large col-small for one larger
-    // column.
-    .container {
-        display: flex;
-        flex-wrap: wrap;
-        img {
-            width: 100%;
-        }
-    }
-    .col-left {
-        flex: 1;
-        padding: 0 2% 0 0;
-        text-align: left;
-    }
-    .col-right {
-        flex: 1;
-        padding: 0 0 0 2%;
-        text-align: left;
-    }
-    .col-large {
-        flex: 3;
-        padding: 0 2% 0 0;
-        text-align: left;
-    }
-    .col-small {
-        flex: 2;
-        padding: 0 0 0 2%;
-        text-align: left;
-    }
-    .col-title-img {
-        flex: 1;
-        padding: 0 2% 0 0 !important;
-        text-align: right;
-    }
-    .col-title {
-        flex: 2.5;
-        padding: 0 0 0 2% !important;
-        text-align: left;
-    }
-    .col {
-        flex: 1;
-        padding: 0;
-        text-align: left;
-    }
+  // Centre the content in a div. Must have another empty div inside it if you
+  // want multiple paragraphs.
+  .centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
 
-    // Custom slide classes
-    .slide-transition {
-        h1 {
-            font-size: @basefontsize * 2;
-            line-height: @basefontsize * 2.9;
-            margin: 5% 0;
-            text-shadow: 3px 3px 5px #000000;
-        }
-    }
-    .slide-title {
-        a {
-            color: @lightcolor;
-            text-decoration: none !important;
-        }
-        p {
-            font-size: @basefontsize * 0.45;
-            line-height: @basefontsize * 0.45;
-            text-shadow: 1px 1px 2px #000000;
-            margin: 0 0 25px 0;
-        }
-        h1#talk-title {
-            margin: 0 auto;
-            text-shadow: 3px 3px 5px #000000;
-            font-size: @basefontsize * 1.7;
-            line-height: @basefontsize * 2.5;
-            text-transform: none;
-            font-weight: normal;
-        }
-        p#talk-authors {
-            font-size: @basefontsize * 0.7;
-            line-height: @basefontsize * 0.7;
-            text-shadow: 2px 2px 2px #000000;
-            margin: 50px 0;
-        }
-        #talk-speaker {
-            font-weight: bold;
-            text-decoration: underline;
-        }
-        #talk-social {
-            font-size: @basefontsize * 0.6;
-            margin: 0;
-        }
-        .talk-info {
-            margin-top: 60px;
-            .talk-logos-container {
-                position: relative;
-                width: 100%;
-                height: 100%;
-                .talk-logos {
-                    position: absolute;
-                    width: 100%;
-                    bottom: 10%;
-                    left: 0;
-                    text-align: right;
-                    img {
-                        height: 1.0em;
-                        width: auto;
-                        margin: 0 2%;
-                    }
-                }
-            }
-        }
-    }
-    .slide-contact {
-        a {
-            color: @lightcolor;
-            text-decoration: none !important;
-        }
-    }
-    .slide-license {
-        .license-icons {
-            font-size: @basefontsize * 1.5;
-            i {
-                margin-right: 5px;
-            }
-        }
-        p {
-            font-size: @basefontsize * 0.75;
-            line-height: @basefontsize * 1.1;
-        }
-    }
+  // Left align text in this container
+  .lefted {
+    align-items: left;
+    justify-content: left;
+    text-align: left;
+  }
 
-    // Tweaks to Reveal.js CSS
-    section {
-        .nomargin {
-            margin: 0 auto;
-            max-width: none;
-            max-height: none;
-        }
-        img {
-            width: 100%;
-            border: none;
-            box-shadow: none;
-            background: none;
-            .nomargin();
-        }
-        video {
-            width: 100%;
-            .nomargin();
-        }
-        &.has-light-background h1 {
-            color: #333333;
-        }
-        &.has-dark-background {
-            a {
-                color: @lightcolor;
-                text-decoration: underline;
-            }
-        }
-        // Needed to be able to centre slides and place notes at the bottom.
-        &.present {
-            height: 100%;
-        }
+  // Columns. Wrap them in the row.
+  .row {
+    display: flex;
+    flex-wrap: wrap;
+    text-align: left;
+    img {
+      width: 100%;
     }
+    margin: 0 @gutter * -1;
+  }
+  .col {
+    flex: 1;
+    padding: 0 @gutter;
+  }
+  .col-large {
+    .col();
+    flex: 3;
+  }
+  .col-medium {
+    .col();
+    flex: 2;
+  }
+  // ========================================================================
+
+
+  // SLIDE CLASSES
+  // ========================================================================
+  .slide-transition {
+    background-color: #0044aa;
     h1 {
-        font-size: @basefontsize * 1.6;
-        line-height: @basefontsize * 2.0;
-        font-weight: normal;
-        text-transform: none;
-        margin-bottom: 3rem;
+      font-size: @basefontsize * 2.5;
+      line-height: @basefontsize * 3;
+      text-shadow: 3px 3px 10px #00000033;
     }
-    h2 {
-        font-size: @basefontsize * 1.3;
-        font-weight: normal;
-        text-transform: none;
-        margin-bottom: 2rem;
+  }
+  .slide-title {
+    p, a, h1 {
+      font-family: @font_title;
     }
-    h3 {
-        font-size: @basefontsize * 1;
-        font-weight: bold;
-        text-transform: none;
-        margin-bottom: 5%;
+    a {
+      color: @lightcolor;
+      text-decoration: none !important;
     }
     p {
-        font-size: @basefontsize * 0.9;
-        line-height: @basefontsize * 1.2;
-        margin: 0 0 30px 0;
+      font-size: @basefontsize * 0.45;
+      line-height: @basefontsize * 0.45;
+      margin: 0 0 25px 0;
     }
-    ol {
-        font-size: @basefontsize * 0.9;
-        margin: 30px 0;
+    h1#talk-title {
+      margin: 0 auto;
+      text-shadow: 3px 3px 10px #00000033;
+      font-size: @basefontsize * 1.7;
+      line-height: @basefontsize * 2.5;
+      text-transform: none;
     }
-    ul {
-        font-size: @basefontsize * 0.9;
-        margin: 30px 0;
-        &.fa-ul {
-            list-style-type: none;
-            margin-left: 1.5em;
-        }
+    p#talk-authors {
+      font-size: @basefontsize * 0.7;
+      line-height: @basefontsize * 0.7;
+      text-shadow: 2px 2px 5px #00000066;
+      margin: 50px 0;
     }
-    li {
-        margin-bottom: 60px;
+    #talk-speaker {
+      text-decoration: underline;
     }
-    pre {
+    .talk-info {
+      padding-top: 150px;
+      .talk-logos-container {
+        position: relative;
         width: 100%;
-        margin: 0;
-        box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.8);
-        code {
-            padding: 3%;
-            max-height: none;
-            font-size: @basefontsize * 0.5;
+        height: 100%;
+        .talk-logos {
+          position: absolute;
+          width: 100%;
+          bottom: 10%;
+          left: 0;
+          text-align: right;
+          img {
+            height: 1.0em;
+            width: auto;
+            margin: 0 2%;
+          }
         }
+      }
     }
-    .print-pdf {
-        section.present {
-            height: 100%;
-        }
+  }
+  .slide-contact {
+    a {
+      text-decoration: none !important;
     }
+  }
+  .slide-license {
+    .license-icons {
+      font-size: @basefontsize * 1.5;
+      i {
+        margin-right: 5px;
+      }
+    }
+    p {
+      font-size: @basefontsize * 0.75;
+      line-height: @basefontsize * 1.1;
+    }
+  }
+  // ========================================================================
+
+
+  // Tweaks to Reveal.js CSS
+  // ========================================================================
+  font-size: @basefontsize;
+
+  p, a, ul, ol, h1, h2, h3 {
+    font-family: @font_main;
+  }
+
+  section {
+    .nomargin {
+      margin: 0 auto;
+      max-width: none;
+      max-height: none;
+    }
+    img {
+      width: 100%;
+      border: none;
+      box-shadow: none;
+      background: none;
+      .nomargin();
+    }
+    video {
+      width: 100%;
+      .nomargin();
+    }
+    &.has-light-background h1 {
+      color: @darkcolor;
+    }
+    &.has-dark-background {
+      a {
+        color: @lightcolor;
+        text-decoration: underline;
+      }
+    }
+  }
+  h1, h2, h3 {
+    font-weight: normal;
+    text-transform: none;
+  }
+  h1 {
+    font-size: @basefontsize * 1.6;
+    line-height: @basefontsize * 2.0;
+    margin-bottom: 2rem;
+  }
+  h2 {
+    font-size: @basefontsize * 1.35;
+    margin-bottom: 2rem;
+  }
+  h3 {
+    font-size: @basefontsize * 1.1;
+    margin-bottom: 1rem;
+  }
+  p {
+    line-height: @basefontsize * 1.5;
+    margin-top: 0;
+    margin-bottom: 3rem;
+  }
+  ol {
+    margin-top: 0;
+    margin-bottom: 1rem;
+  }
+  ul {
+    margin: 0 0 1rem 0;
+    &.fa-ul {
+      list-style-type: none;
+      margin-left: 1.5em;
+    }
+  }
+  li {
+    margin-bottom: 2rem;
+  }
+  code {
+    font-family: @font_code;
+  }
+  pre {
+    margin-top: 0;
+    margin-bottom: 3rem;
+    width: 100%;
+    box-shadow: none; //5px 5px 6px #00000044;
+    code {
+      padding: 2rem 2.3rem;
+      max-height: none;
+    }
+  }
+  .print-pdf {
+    section.present {
+      height: 100%;
+    }
+  }
+  // ========================================================================
 }
