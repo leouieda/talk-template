@@ -2,10 +2,11 @@
 
 This is a template I use to make [reveal.js](https://revealjs.com/) slides.
 The slide contents are in `slides.md`, which is loaded into `index.html`.
-There is also custom styling and CSS classes to place items on slides defined
+
+Uses custom styling and CSS classes to place items on slides defined
 in `css/style.less` (using [Less](http://lesscss.org/)).
 
-Most of the components used are included in the repository so that the
+The packages and fonts used are included in the repository so that the
 presentation can work offline in a pinch.
 
 The original inspiration is this template by Matthew Turk:
