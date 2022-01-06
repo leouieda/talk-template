@@ -92,9 +92,9 @@ when you update any of the files in the repository.
 
 ## Serving on GitHub Pages
 
-Go to your repository "Setting > Pages" and select "Source" as your
-`main` branch and "Folder" as `/ (root)`. You probably want to select
-"Enforce HTTPS as well.
+Go to your repository "Settings > Pages" and select "Source" as the
+`main` branch and `/ (root)`. You probably want to select "Enforce HTTPS" 
+as well.
 
 Your slides should now be served at https://USERNAME.github.io/REPOSITORY
 or equivalent if you're using a custom domain.
