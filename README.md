@@ -10,6 +10,21 @@ and more.
 > The original inspiration is this template by Matthew Turk:
 > https://github.com/matthewturk/mjt-talk-template
 
+## Using
+
+1. Click on the "Use this template" button or go to 
+   https://github.com/leouieda/talk-template/generate to create a 
+   new repository for your slides.
+1. Change the HTML title (the one that appears on the browser tab)
+   in `index.html`.
+1. Preview the presentation by 
+   [serving the slides locally](#serving-the-slides-locally).
+1. Add your content to `slides.md` and images to `assets` 
+   (remove the images you don't want to use).
+1. Commit and push your changes.
+1. Make your presentation public by 
+   [enabling GitHub Pages](#serving-on-github-pages).
+
 ## What's included
 
 `index.html`: This is the master document that sets up reveal.js and 
