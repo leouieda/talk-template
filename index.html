@@ -66,7 +66,11 @@
       plugins: [RevealMarkdown, RevealMath.KaTeX, RevealHighlight],
       width: 1920,
       height: 1080,
-      margin: 0.1,
+      margin: 0.05,
+      // Bounds for smallest/largest possible scale to apply to content
+      minScale: 0.1,
+      maxScale: 2.0,
+      // Play videos automatically when displaying a slide
       autoPlayMedia: true,
       // Vertical centering of slides
       center: true,
@@ -89,17 +93,7 @@
       // Display a presentation progress bar
       progress: true,
       // Display the page number of the current slide
-      // - true:    Show slide number
-      // - false:   Hide slide number
-      // Can optionally be set as a string that specifies the number formatting:
-      // - "h.v":   Horizontal . vertical slide number (default)
-      // - "h/v":   Horizontal / vertical slide number
-      // - "c":   Flattened slide number
       // - "c/t":   Flattened slide number / total slides
-      // Alternatively, you can provide a function that returns the slide
-      // number for the current slide. The function should take in a slide
-      // object and return an array with one string [slideNumber] or
-      // three strings [n1,delimiter,n2]. See #formatSlideNumber().
       slideNumber: "c/t",
       // Add the current slide number to the URL hash so that reloading the
       // page/copying the URL will return you to the same slide
