@@ -268,7 +268,7 @@ Images by Leonardo Uieda (CC-BY).
 <div class="row">
 <div class="col-large tiny">
 
-<img src="assets/nbr_thomas_fire.jpg">
+<img style="width: 95%;" src="assets/nbr_thomas_fire.jpg">
 
 This way the image is larger on the screen. Use it for maps or main figures.
 
@@ -287,8 +287,6 @@ $ D\dfrac{\partial^4 w}{\partial x^4} = q - g (\rho_m - \rho_w) w $
 
 ===============================================================================
 
-# Column sizes
-
 <div class="row">
 <div class="col tiny">
 
@@ -298,6 +296,8 @@ This way the image is narrow so it should be in a smaller column.
 
 </div>
 <div class="col-medium">
+
+# Column sizes
 
 Columns come in 3 sizes:
 
@@ -345,7 +345,7 @@ fig.show()
 
 Makes this map 👇
 
-<img src="assets/pygmt-example.png">
+<img style="width: 90%" src="assets/pygmt-example.png">
 
 </div>
 
