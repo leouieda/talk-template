@@ -10,7 +10,6 @@
 @lightcolor: #ffffff;
 @darkcolor: #333333;
 @gutter: 25px;
-@gutter_bottom: 25px;
 @font_main: "Computer Modern Serif";
 @font_footnote: "Source Sans Pro";
 @font_title: "Computer Modern Serif";
@@ -171,6 +170,7 @@
     }
   }
   .slide-title {
+    text-align: left;
     p, a, h1 {
       font-family: @font_title;
     }
@@ -179,9 +179,9 @@
       text-decoration: none !important;
     }
     p {
-      font-size: @basefontsize * 0.45;
-      line-height: @basefontsize * 0.45;
-      margin: 0 0 25px 0;
+      font-size: @basefontsize * 0.55;
+      line-height: @basefontsize * 0.6;
+      margin: 0 0 40px 0;
     }
     h1#talk-title {
       margin: 0 auto;
@@ -200,7 +200,7 @@
       text-decoration: underline;
     }
     .talk-info {
-      padding-top: 150px;
+      padding-top: 100px;
       .talk-logos-container {
         position: relative;
         width: 100%;

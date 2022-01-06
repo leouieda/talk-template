@@ -11,8 +11,6 @@ The reveal.js configuration can be found in index.html
 <div class="r-stretch">
 </div>
 
-<div class="lefted">
-
 <h1 id="talk-title">
   A long talk title that may be kind of boring and more than one line long
 </h1>
@@ -24,21 +22,19 @@ The reveal.js configuration can be found in index.html
 </p>
 
 <!-- Place location and date side-by-side with affiliation logos -->
-<div class="container talk-info">
+<div class="row talk-info">
 <div class="col-large">
 
-Event/host of the talk
-<span style="margin: 0 20px">•</span>
-XX Month 202X
+Event/host of the talk | XX Month 202X
 
 <!-- Permission to reuse and CC-BY license logo -->
 <i class="fa fa-camera" style="margin: 0 10px 0 0"></i>
 Feel free to screenshot/share/reuse this presentation
-<span style="margin: 0 20px">•</span>
+|
 <a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by" style="margin: 0 10px 0 2px"></i> CC-BY 4.0 License</a>
 
 </div>
-<div class="col-small">
+<div class="col-medium">
 
 <!-- Add logos here. Need these wrappers to align them to the bottom right -->
 <div class="talk-logos-container">
@@ -50,8 +46,6 @@ Feel free to screenshot/share/reuse this presentation
 </div>
 
 </div>
-</div>
-
 </div>
 
 ===============================================================================
