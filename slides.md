@@ -221,6 +221,9 @@ This one is by Leonardo Uieda (CC-BY).
 
 ===============================================================================
 
+<div class="r-stretch centered">
+<div>
+
 # Multiple columns
 
 Place as many `col`s as you want. They will have the same size.
@@ -250,6 +253,8 @@ bla bla.
 </div>
 </div>
 
+</div>
+</div>
 <div class="footnote">
 
 Images by Leonardo Uieda (CC-BY).
