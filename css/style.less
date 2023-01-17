@@ -28,6 +28,12 @@
   // ========================================================================
 
   // Make elements inside this div have larger or smaller font-size
+  .enormous {
+    p, a, ul, ol {
+      font-size: @basefontsize * 4 !important;
+      line-height: @basefontsize * 5 !important;
+    }
+  }
   .huge {
     p, a, ul, ol {
       font-size: @basefontsize * 2 !important;
@@ -161,11 +167,10 @@
   // SLIDE CLASSES
   // ========================================================================
   .slide-transition {
-    background-color: #0044aa;
+    background-color: #0053d1;
     h1 {
       font-size: @basefontsize * 2.5;
       line-height: @basefontsize * 3;
-      text-shadow: 3px 3px 10px #00000033;
     }
   }
   .slide-title {
@@ -184,16 +189,14 @@
     }
     h1#talk-title {
       margin: 0 auto;
-      text-shadow: 3px 3px 10px #00000033;
-      font-size: @basefontsize * 1.7;
+      font-size: @basefontsize * 2.25;
       line-height: @basefontsize * 2.5;
       text-transform: none;
     }
     p#talk-authors {
-      font-size: @basefontsize * 0.7;
-      line-height: @basefontsize * 0.7;
-      text-shadow: 2px 2px 5px #00000066;
-      margin: 50px 0;
+      font-size: @basefontsize;
+      line-height: @basefontsize;
+      margin: 80px 0;
     }
     #talk-speaker {
       text-decoration: underline;
@@ -211,7 +214,7 @@
           left: 0;
           text-align: right;
           img {
-            height: 1.0em;
+            height: 1.5em;
             width: auto;
             margin: 0 2%;
           }

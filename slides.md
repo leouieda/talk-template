@@ -25,12 +25,15 @@ The reveal.js configuration can be found in index.html
 <div class="row talk-info">
 <div class="col-large">
 
-Event/host of the talk | XX Month 202X
+<i class="fa fa-calendar-alt" style="margin: 0 10px 0 0"></i>
+XX Month 202X
+<span style="margin: 0 20px">/</span>
+Event/host of the talk
 
 <!-- Permission to reuse and CC-BY license logo -->
 <i class="fa fa-camera" style="margin: 0 10px 0 0"></i>
 Feel free to screenshot/share/reuse this presentation
-|
+<span style="margin: 0 20px">/</span>
 <a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by" style="margin: 0 10px 0 2px"></i> CC-BY 4.0 License</a>
 
 </div>
@@ -39,9 +42,8 @@ Feel free to screenshot/share/reuse this presentation
 <!-- Add logos here. Need these wrappers to align them to the bottom right -->
 <div class="talk-logos-container">
 <div class="talk-logos">
-  <img src="assets/compgeolab-banner-light.svg">
-  <br>
-  <img src="assets/university-of-liverpool-white.png">
+  <a href="https://www.compgeolab.org"><img src="assets/compgeolab-banner-light.svg" alt="Computer-Oriented Geoscience Lab"></a>
+  <a href="https://www.liverpool.ac.uk/"><img src="assets/university-of-liverpool-white.png" alt="University of Liverpool">
 </div>
 </div>
 
