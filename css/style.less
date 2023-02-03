@@ -8,7 +8,7 @@
 @basefontsize: 54px;
 @lightcolor: #ffffff;
 @darkcolor: #333333;
-@gutter: 25px;
+@gutter: 30px;
 @font_main: "Atkinson Hyperlegible";
 @font_footnote: "Atkinson Hyperlegible";
 @font_title: "Atkinson Hyperlegible";
@@ -29,33 +29,39 @@
 
   // Make elements inside this div have larger or smaller font-size
   .enormous {
-    p, a, ul, ol {
+    p, a, table, ul, ol {
       font-size: @basefontsize * 4 !important;
       line-height: @basefontsize * 5 !important;
     }
   }
   .huge {
-    p, a, ul, ol {
+    p, a, table, ul, ol {
       font-size: @basefontsize * 2 !important;
       line-height: @basefontsize * 2.5 !important;
     }
   }
+  .large {
+    p, a, table, ul, ol {
+      font-size: @basefontsize * 1.5 !important;
+      line-height: @basefontsize * 2 !important;
+    }
+  }
   .small {
-    p, a, ul, ol {
+    p, a, table, ul, ol {
       font-size: @basefontsize * 0.7 !important;
       line-height: @basefontsize * 1 !important;
     }
   }
   .tiny {
-    p, a, ul, ol {
-      font-size: @basefontsize * 0.5 !important;
-      line-height: @basefontsize * 0.6 !important;
+    p, a, table, ul, ol {
+      font-size: @basefontsize * 0.4 !important;
+      line-height: @basefontsize * 0.5 !important;
     }
   }
   .miniscule {
-    p, a, ul, ol {
-      font-size: @basefontsize * 0.4 !important;
-      line-height: @basefontsize * 0.5 !important;
+    p, a, table, ul, ol {
+      font-size: @basefontsize * 0.35 !important;
+      line-height: @basefontsize * 0.4 !important;
     }
   }
 
@@ -81,13 +87,6 @@
     & > div {
       margin-bottom: -3rem;
     }
-  }
-
-  // Left align text in this container
-  .lefted {
-    align-items: left;
-    justify-content: left;
-    text-align: left;
   }
 
   // Footnotes. Use in a div. Add the r-stretch class on the element before to
@@ -143,7 +142,6 @@
   .row {
     display: flex;
     flex-wrap: wrap;
-    text-align: left;
     img {
       width: 100%;
     }
@@ -161,6 +159,21 @@
     .col();
     flex: 2;
   }
+
+  // Align items and text in a container
+  .middle {
+    align-items: center;
+  }
+  .text-left {
+    text-align: left;
+  }
+  .text-center {
+    text-align: center;
+  }
+  .text-right {
+    text-align: right;
+  }
+
   // ========================================================================
 
 
@@ -182,13 +195,16 @@
       color: @lightcolor;
       text-decoration: none !important;
     }
+    a:hover {
+      text-decoration: underline !important;
+    }
     p {
       font-size: @basefontsize * 0.5;
       line-height: @basefontsize * 0.6;
       margin: 0 0 40px 0;
     }
     h1#talk-title {
-      margin: 0 auto;
+      margin: 0;
       font-size: @basefontsize * 2.25;
       line-height: @basefontsize * 2.5;
       text-transform: none;
@@ -223,20 +239,15 @@
     }
   }
   .slide-contact {
-    a {
-      text-decoration: none !important;
-    }
-  }
-  .slide-license {
-    .license-icons {
+    i {
       font-size: @basefontsize * 1.5;
-      i {
-        margin-right: 5px;
-      }
+      line-height: @basefontsize * 2.5;
+      margin-right: 5px;
     }
     p {
-      font-size: @basefontsize * 0.75;
-      line-height: @basefontsize * 1.1;
+      font-size: @basefontsize * 0.8;
+      line-height: @basefontsize * 1.25;
+      margin-bottom: 70px;
     }
   }
   // ========================================================================
@@ -282,7 +293,7 @@
   h1 {
     font-size: @basefontsize * 1.6;
     line-height: @basefontsize * 2.0;
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
   }
   h2 {
     font-size: @basefontsize * 1.35;

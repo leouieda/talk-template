@@ -12,10 +12,10 @@ The reveal.js configuration can be found in index.html
 </div>
 
 <h1 id="talk-title">
-  A long talk title that may be kind of boring and more than one line long
+  A long talk title that may <br>be kind of boring and <br>more than one line long
 </h1>
 <p id="talk-authors">
-  <span id="talk-speaker">Leonardo Uieda</span>,
+  <a href="https://www.leouieda.com" id="talk-speaker">Leonardo Uieda</a>,
   Author Two,
   and
   Author Three
@@ -27,14 +27,14 @@ The reveal.js configuration can be found in index.html
 
 <i class="fa fa-calendar-alt" style="margin: 0 10px 0 0"></i>
 XX Month 202X
-<span style="margin: 0 20px">/</span>
+<span style="margin: 0 20px"></span>
 Event/host of the talk
 
 <!-- Permission to reuse and CC-BY license logo -->
 <i class="fa fa-camera" style="margin: 0 10px 0 0"></i>
 Feel free to screenshot/share/reuse this presentation
-<span style="margin: 0 20px">/</span>
-<a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by" style="margin: 0 10px 0 2px"></i> CC-BY 4.0 License</a>
+<span style="margin: 0 20px"></span>
+<a href="https://creativecommons.org/licenses/by/4.0/"><i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by" style="margin: 0 10px 0 2px"></i>CC-BY 4.0 License</a>
 
 </div>
 <div class="col-medium">
@@ -43,7 +43,7 @@ Feel free to screenshot/share/reuse this presentation
 <div class="talk-logos-container">
 <div class="talk-logos">
   <a href="https://www.compgeolab.org"><img src="assets/compgeolab-banner-light.svg" alt="Computer-Oriented Geoscience Lab"></a>
-  <a href="https://www.liverpool.ac.uk/"><img src="assets/university-of-liverpool-white.png" alt="University of Liverpool">
+  <a href="https://www.liverpool.ac.uk/"><img src="assets/university-of-liverpool-white.png" alt="University of Liverpool"></a>
 </div>
 </div>
 
@@ -356,15 +356,30 @@ Makes this map 👇
 <!-- .slide: class="slide-contact" data-background-image="assets/contact-slide.svg" data-background-size="contain" data-background-color="#000000" -->
 
 <div class="r-stretch centered">
-<div class="huge">
+<div>
 
-Find out more:
+<i class="fas fa-comments"></i>
+<br>
+Contact:
+<a href="https://www.leouieda.com">www.leouieda.com</a>
 
-[www.leouieda.com](https://www.leouieda.com)
+<i class="fab fa-github"></i>
+<br>
+Source code for this presentation:
+<br>
+[github.com/leouieda/talk-template](https://github.com/leouieda/talk-template)
+
+<i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i>
+<br>
+Unless otherwise noted,
+the contents of this presentation are
+licensed under the
+<br>
+[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
 
 </div>
 </div>
-<div class="footnote-left">
+<div class="footnote-left dark">
 
 The background image is a Landsat 8 scene (panchromatic band) of the Mersey
 river delta.
@@ -372,26 +387,3 @@ river delta.
 White dots are on the right are offshore wind turbines.
 
 </div>
-
-===============================================================================
-
-<!-- .slide: class="slide-license" -->
-
-<p class="license-icons">
-<i class="fab fa-github"></i>
-</p>
-
-Source code for this presentation:
-<br>
-[github.com/leouieda/talk-template](https://github.com/leouieda/talk-template)
-
-
-<p class="license-icons" style="margin-top: 5rem;">
-<i class="fab fa-creative-commons"></i><i class="fab fa-creative-commons-by"></i>
-</p>
-
-Unless otherwise noted,
-the contents of this presentation are
-licensed under the
-<br>
-[Creative Commons Attribution 4.0 International License](https://creativecommons.org/licenses/by/4.0/).
