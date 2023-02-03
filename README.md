@@ -17,6 +17,7 @@ and more.
    new repository for your slides.
 1. Change the HTML title (the one that appears on the browser tab)
    in `index.html`.
+1. Remove the Plausible Analytics script from the `<head>` in `index.html`.
 1. Preview the presentation by
    [serving the slides locally](#serving-the-slides-locally).
 1. Add your content to `slides.md` and images to `assets`
@@ -29,7 +30,7 @@ and more.
 
 `index.html`: This is the master document that sets up reveal.js and
 its plugins and loads the slide content from `slides.md`.
-**Change the HTML title tag here**.
+**Change the HTML `<title>` tag here**.
 
 `slides.md`: Markdown file with the actual slide content. The template
 includes some slides that demo the custom CSS classes available.
