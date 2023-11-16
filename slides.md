@@ -354,7 +354,7 @@ Makes this map 👇
 
 ===============================================================================
 
-<!-- .slide: class="slide-contact" data-background-image="assets/title-slide.svg" data-background-size="contain" data-background-color="#000000" -->
+<!-- .slide: class="slide-contact" data-background-image="assets/contact-slide.svg" data-background-size="contain" data-background-color="#000000" -->
 
 <div class="r-stretch centered">
 <div>
