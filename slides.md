@@ -43,7 +43,8 @@ Feel free to screenshot/share/reuse this presentation
 <div class="talk-logos-container">
 <div class="talk-logos">
   <a href="https://www.compgeolab.org"><img src="assets/compgeolab-banner-light.svg" alt="Computer-Oriented Geoscience Lab"></a>
-  <a href="https://www.liverpool.ac.uk/"><img src="assets/university-of-liverpool-white.png" alt="University of Liverpool"></a>
+  <a href="https://www.iag.usp.br/"><img src="assets/iag.png" alt="Instituto de Astronomia, Geofísica e Ciências Atmosféricas"></a>
+  <a href="https://www.usp.br/"><img src="assets/usp.png" alt="Universidade de São Paulo"></a>
 </div>
 </div>
 
@@ -353,7 +354,7 @@ Makes this map 👇
 
 ===============================================================================
 
-<!-- .slide: class="slide-contact" data-background-image="assets/contact-slide.svg" data-background-size="contain" data-background-color="#000000" -->
+<!-- .slide: class="slide-contact" data-background-image="assets/title-slide.svg" data-background-size="contain" data-background-color="#000000" -->
 
 <div class="r-stretch centered">
 <div>
@@ -381,9 +382,7 @@ licensed under the
 </div>
 <div class="footnote-left dark">
 
-The background image is a Landsat 8 scene (panchromatic band) of the Mersey
-river delta.
-<br>
-White dots are on the right are offshore wind turbines.
+The background image is a Landsat 9 scene of the city of São Paulo, Brazil,
+showing the USP campus in the center.
 
 </div>
