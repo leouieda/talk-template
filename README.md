@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> This repository has been moved to Codeberg: https://codeberg.org/leouieda/talk-template.
+> This version is archived for continuity only.
+
 # Template for my reveal.js based slides
 
 This is a template I use to make [reveal.js](https://revealjs.com/) slides
